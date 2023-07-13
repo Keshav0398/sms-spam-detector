@@ -1,0 +1,39 @@
+name: Sync to Hugging Face hub
+
+
+
+
+
+on:
+
+    push: 
+
+        branches: [main]
+
+        
+
+    #to run this workflow manually from the action tab
+
+    workflow_dispatch:
+
+jobs:
+
+    sync-to-hub:
+
+        runs-on: ubuntu-latest
+
+        steps:
+
+           - uses: actions/checkout@v2
+
+             with:
+
+                fatch-depth: 0
+
+           - name: Push to hub
+
+             env:
+
+                HF_TOKEN: ${{ secrets.HF_TOCKEN }}
+
+             run: git push https://Keshav0398:$HF_TOKEN@huggingface.co/spaces/Keshav0398/sms-spam-detector main

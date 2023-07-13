@@ -36,4 +36,4 @@ jobs:
 
                 HF_TOKEN: ${{ secrets.HF_TOCKEN }}
 
-             run: git push https://Keshav0398:$HF_TOKEN@huggingface.co/spaces/Keshav0398/sms-spam-detector main
+             run: git push --force https://Keshav0398:$HF_TOKEN@huggingface.co/spaces/Keshav0398/sms-spam-detector main
